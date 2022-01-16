@@ -1,0 +1,38 @@
+body{margin: 0; padding: 0; min-height: 100vh;}
+.header{width: 100%; height: 150px; box-sizing: border-box;}
+.logo{width: 50%; height: 150px;}
+.header h1{float: right; margin: 0; margin-right: 180px; font-size: 48px; padding: 30px 0; font-family: Verdana;
+color: darkblue; text-shadow: 2px 2px 5px red;}
+.logins{width: 500px; margin: auto; margin-top: 15px;}
+.admin-btn{width: 230px; height: 40px; display: inline-block; font-size: 18px; border: none; border-radius: 10px;
+color: white; background-color: dodgerblue; margin-right: 10px;}
+.staff-btn{width: 230px; height: 40px; display: inline-block; font-size: 18px; border: none; border-radius: 10px;
+color: white; background-color: crimson; margin-left: 10px;}
+.admin-btn:hover{background-color: darkblue; cursor: pointer;}
+.staff-btn:hover{background-color: rgb(155, 8, 8); cursor: pointer;}
+.footer{text-align: center; color: rgb(255, 255, 255); background-color: rgb(7, 37, 172); height: 50px; 
+line-height: 50px; position: sticky; top: 100%;}
+#admin-login{display: none; width: 400px; margin: auto; padding: 30px; background-color: dodgerblue; margin-top: 30px;
+border: 2px solid darkblue; border-radius: 10px;}
+#admin-login label{font-size: 24px; color: white; font-family: Verdana;}
+#admin-login input[type="text"]{width: 100%; height: 50px; border-radius: 10px; box-sizing: border-box; padding: 10px;}
+#admin-login input[type="password"]{width: 100%; height: 50px; border-radius: 10px; box-sizing: border-box; padding: 10px;}
+#admin-login input[type="reset"]{border: none; background-color: tomato; color: white; font-size: 18px; 
+font-family: Verdana; padding: 5px; border-radius: 10px; margin: 5px; cursor: pointer;}
+#admin-login input[type="reset"]:hover{background-color: red;}
+#admin-login input[type="submit"]{border: none; background-color: rgb(200, 255, 0); color: rgb(235, 69, 4); font-size: 18px; 
+font-family: Verdana; padding: 5px; border-radius: 10px; margin: 5px; cursor: pointer; float: right;}
+#admin-login input[type="submit"]:hover{background-color: darkblue;}
+#staff-login{display: none; width: 400px; margin: auto; padding: 30px; background-color: crimson; margin-top: 30px;
+border: 2px solid darkblue; border-radius: 10px; margin-bottom: 30px;}
+#staff-login label{font-size: 24px; color: white; font-family: Verdana;}
+#staff-login input[type="text"]{width: 100%; height: 50px; border-radius: 10px; box-sizing: border-box; padding: 10px;}
+#staff-login input[type="password"]{width: 100%; height: 50px; border-radius: 10px; box-sizing: border-box; padding: 10px;}
+#staff-login input[type="reset"]{border: none; background-color: tomato; color: white; font-size: 18px; 
+font-family: Verdana; padding: 5px; border-radius: 10px; margin: 5px; cursor: pointer;}
+#staff-login input[type="reset"]:hover{background-color: red;}
+#staff-login input[type="submit"]{border: none; background-color: rgb(200, 255, 0); color: rgb(235, 69, 4); font-size: 18px; 
+font-family: Verdana; padding: 5px; border-radius: 10px; margin: 5px; cursor: pointer; float: right;}
+#staff-login input[type="submit"]:hover{background-color: darkblue;}
+.btn-close{float: right;}
+.btn-close button{background-color: red; color: white;}
