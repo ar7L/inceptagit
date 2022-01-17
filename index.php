@@ -27,10 +27,35 @@
                 // print_r($get);
                 if($_SESSION['admin_name'] == $name && $_SESSION['admin_password'] == $password){
                     echo "Hello Admin";
-                    $err = 1;
                     header("location:admin.php");
                 }else{
                     $err = 0;
+                    $_SESSION['error'] = 1;
+
+                }
+            }
+            
+
+        }
+        if(isset($_POST['staff_login'])){
+            $name = $_POST['staff_username'];
+            $password = $_POST['staff_password'];
+            $get = getBy("staff","WHERE staff_username = '$name' AND staff_password = '$password'");
+            if(!empty($get)){
+                foreach($get as $k => $v){
+                    foreach($v as $key => $value){
+                        $_SESSION[$key] = $value;
+                    }
+                }
+                // print_r($get);
+                if($_SESSION['staff_username'] == $name && $_SESSION['staff_password'] == $password){
+                    echo "Hello Admin";
+                    $err = 1;
+                    header("location:shop.php");
+                }else{
+                    $err = 0;
+                    $_SESSION['error'] = 1;
+
                 }
             }
             
@@ -43,7 +68,7 @@
         <h1>Incepta Pharmacy</h1>
     </div>
      <h1 style="color: limegreen; background-color: beige; text-align: center;">
-        <?php if($err == 0){echo "ACCESS DENIED";}?> 
+        <?php if(isset($_SESSION['error'])){echo "ACCESS DENIED";}?> 
     </h1>
     <div class="logins">
         <button class="admin-btn" onclick="Show_admin()">Log in as Admin</button>
@@ -69,7 +94,7 @@
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="staff_password" required placeholder="Your password"><br><br>
             <input type="reset">
-            <input type="submit">
+            <input type="submit" name = "staff_login">
         </form>
     </div>
     <div class="footer">

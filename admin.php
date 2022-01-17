@@ -33,6 +33,10 @@
            $remove_id = $_POST['staff'];
            deleteBy("staff","WHERE staff_id = '$remove_id'", "admin.php");
        }
+       if(isset($_POST['drug_remover'])){
+           $remove_id = $_POST['drug'];
+           deleteBy("drugs","WHERE drug_id = '$remove_id'", "admin.php");
+       }
 
      ?> 
     <div class="header">
@@ -96,19 +100,42 @@
             </form>
         </div>
     </div>
+
+    <?php 
+        if(isset($_POST['add_drug'])){
+            $drug_name = $_POST['drug-name'];
+            $drug_price = $_POST['drug-price'];
+            $drug_quant = $_POST['drug-quant'];
+            $drug_data = array($drug_name, $drug_price,$drug_quant);
+            myInsert("drugs", $drug_data,"admin.php");
+        }
+    ?>
+
     <div id="drug" class="modal-3">
         <div class="modal-3-content">
             <button class="close-3" onclick="Hide_drug()">&times;</button>
             <div class="content">
-            <h3>Add a new item</h3><br>
-            <label for="drug-name">Name of item</label><br><br>
-            <input id="drug-name" name="drug-name" type="text" placeholder="Drug name" required><br><br>
-            <label for="drug-price">Price per unit</label><br><br>
-            <input id="drug-price" name="drug-price" type="number" placeholder="Price per unit" required><br><br>
-            <button class="add-drug">Add item</button><br><br>
-            <h3>Remove an item</h3><br>
-            <select name="drug"></select><br><br>
-            <button class="rmv-drug">Remove</button>
+            <form action="admin.php" method="POST">
+                <h3>Add a new item</h3><br>
+                <label for="drug-name">Name of item</label><br><br>
+                <input id="drug-name" name="drug-name" type="text" placeholder="Drug name" required><br><br>
+                <label for="drug-price">Price per unit</label><br><br>
+                <input id="drug-price" name="drug-price" type="number" placeholder="Price per unit" required><br><br>
+                <input id="drug-price" name="drug-quant" type="text" placeholder="Quantity" required><br><br>
+                <input type="submit" name="add_drug" class="add-drug" value = "Add item"/><br><br>
+            </form>
+            <form action="admin.php" method="POST">
+                <h3>Remove an item</h3><br>
+                <select name="drug">
+                    <?php $drugs = getAll("drugs");
+                        for($i = 0 ; $i < count($drugs); $i++){
+                            ?>
+                         <option value=<?php echo $drugs[$i]['drug_id'];?> > <?php echo $drugs[$i]['drug_name']; ?> </option>
+                       <?php }
+                     ?>
+                </select><br><br>
+                <input type = "submit" name = "drug_remover" class="rmv-drug" value = "Remove">
+            </form>
             </div>
         </div>
     </div>
