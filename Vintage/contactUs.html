@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/taken.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1 style="font-family: Chomsky;">Vintage Collections</h1>
+            </div>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="qanda.html">Q & A</a></li>
+                <li><a href="drivers.html">Drivers</a></li>
+                <li><button class="login-button" href="#">Newsletter</button></li>
+                <!-- <li><button class="join-button" href="#">Join</button></li> -->
+            </ul>
+        </nav>
+    </header>
+    
+        <div class="contact">
+            <div class="contain">
+
+                <div class="wrapper">
+              
+                  <div class="form">
+                    <h4>GET IN TOUCH</h4>
+                    <h2 class="form-headline">Send Us Your Valuable Message</h2>
+                    <form id="submit-form" action="">
+                      <p>
+                        <input id="name" class="form-input" type="text" placeholder="Your Name*">
+                        <small class="name-error"></small>
+                      </p>
+                      <p>
+                        <input id="email" class="form-input" type="email" placeholder="Your Email*">
+                        <small class="name-error"></small>
+                      </p>
+                      <p class="full-width">
+                        <input id="company-name" class="form-input" type="text" placeholder="Subject*" required>
+                        <small></small>
+                      </p>
+                      <p class="full-width">
+                        <textarea  minlength="20" id="message" cols="30" rows="7" placeholder="Your Message*" required></textarea>
+                        <small></small>
+                      </p>
+                      <p class="full-width">
+                        <input type="checkbox" id="checkbox" name="checkbox" checked> Yes, I would like to receive communications by call / email about Company's services.
+                      </p>
+                      <p class="full-width">
+                        <input type="submit" class="submit-btn" value="Submit" onclick="checkValidations()">
+                        <button class="reset-btn" onclick="reset()">Reset</button>
+                      </p>
+                    </form>
+                  </div>
+              
+                  <div class="contacts contact-wrapper">
+              
+                    <ul>
+                      <li>We've driven online revenues of over <span class="highlight-text-grey">$2
+                          billion</span> for our clients. Ready to know
+                        how we can help you?</li>
+                      <span class="hightlight-contact-info">
+                        <li class="email-info"><i class="fa fa-envelope" aria-hidden="true"></i> info@demo.com</li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i> <span class="highlight-text">+91 11 1111 2900</span></li>
+                      </span>
+                    </ul>
+                  </div>
+                </div>
+              
+            </div>
+        </div>
+    <footer>
+      <div class="container">
+          <div class="two-sections">
+            <div class="segment-1">
+                <h3>Basic Info</h3>
+                <ul>
+                    <li>About Us</li>
+                    <li>Our Drivers</li>
+                </ul>
+            </div>
+            <div class="segment-1">
+              <h3>FAQ</h3>
+              <ul>
+                  <li>Search in Q & A Section</li>
+              </ul>
+              <button>Go &rarr;</button>
+          </div>
+          </div>
+        <div class="social-links">
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-whatsapp"></i>
+        </div>
+      </div>
+      <div class="centerize">
+        <a>@copyright reserved 2022</a>
+    </div>
+    </footer>
+    <script src="js/taken.js"></script>
+</body>
+</html>
