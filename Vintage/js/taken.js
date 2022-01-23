@@ -50,3 +50,15 @@ buttons.forEach(button => {
     delete activeSlide.dataset.active
   })
 })
+
+//accordion js
+const accordionItems = document.querySelectorAll(".accordion__item--summary");
+
+accordionItems.forEach(function(item) {
+  item.addEventListener("click", function(event) {
+    event.stopPropagation();
+    let txt = item.textContent;
+    console.log(txt);
+    item.parentNode.classList.toggle("accordion__item--active");
+  });
+});

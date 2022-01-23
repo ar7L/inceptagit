@@ -1,0 +1,107 @@
+:root {
+    // --indigo: #6867AC;
+    --purple: rgba(29,155,240,1);
+    --purple-pink: rgba(29,155,240,0.6);
+    --light-pink: rgba(29,155,240,0.6);
+    --white: #FFFFFF;
+    --gray-white: #F9F9F9;
+    --box-shadow: 5px 5px 50px 10px rgba(40, 39, 86, 0.15);
+  }
+.qanda{
+    transition: 0.4s all ease-in-out;
+}
+.accontent {
+    width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+    background-color: var(--indigo);
+  }
+  
+  .content__accordion {
+    padding: 40px 0;
+  }
+  
+  .accordion {
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+  
+  .accordion__wrapper,
+  .accordion__item {
+    display: flex;
+    flex-direction: column;
+    width: 100;
+  }
+  
+  .accordion__wrapper {
+    gap: 12px;
+  }
+  
+  .accordion__item--summary,
+  .accordion__item--detail {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid var(--light-pink);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .accordion__item--summary {
+    flex-direction: row;
+    background-color: var(--purple-pink);
+    cursor: pointer;
+  }
+  
+  .accordion__item--detail {
+    margin-top: 0px;
+    background-color: var(--purple);
+    max-height: 0;
+    opacity: 0;
+    padding: 0;
+    border: 1px solid transparent;
+    visibility: hidden;
+    overflow: hidden;
+  }
+  
+  .accordion__item-title h5 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+  }
+  
+  .accordion__item-toggler {
+    margin-left: auto;
+  }
+  
+  .accordion__item-toggler button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--white)
+  }
+  
+  .accordion__detail-section {
+    padding: 12px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.3px;
+    color: var(--gray-white);
+  }
+  
+  .accordion__item--active .accordion__item-toggler button h1 {
+     transform: rotate(180deg);
+  }
+  
+  .accordion__item--active .accordion__item--detail {
+    max-height: 300px;
+    opacity: 1;
+    visibility: visible;
+    margin-top: 12px;
+    border: 1px solid var(--light-pink);
+  }
+  
