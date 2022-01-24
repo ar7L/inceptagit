@@ -125,6 +125,7 @@ body{
 }
 header{
     position: relative;
+    margin-bottom: 100px;
 }
 .container{
     max-width: 90%;
@@ -133,6 +134,7 @@ header{
 }
 
 .slides{
+    margin-top: 5rem;
     .two-sections{
         display: flex;
         justify-content: center;
@@ -239,11 +241,12 @@ header{
     }
 }
 .countries{
-    margin: 5rem;
+    margin: 5rem 0rem;
     .content{
         display: flex;
         justify-content: center;
         h1{
+            margin: 5rem 0rem;
             @include hover-me;
         }
     }
@@ -307,9 +310,151 @@ footer{
         color: white;
     }
 }
+  /* modal */
 
+  .ebcf_modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10001; /* Sit on top */
+    padding-top: 20vh; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    transition: 0.4s all ease-in-out;
+}
+/* Modal Content */
+.ebcf_modal-content {
+	text-align: center;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 1.5rem;
+    @media screen and(max-width:800px){
+        width: 98%;
+    }
+}
+
+/* The Close Button */
+.ebcf_close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.ebcf_close:hover,
+.ebcf_close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* MODAL CSS */
+.mybtn{
+    text-decoration: none;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: teal;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+}
+.mybtn:hover{
+    color: #fff;
+    background-color: teal;
+}
+//another slider-2
+
+.slider-2{
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+  }
+  .slides-2{
+    width: 500%;
+    display: flex;
+    position: relative;
+    transition: 2s;
+  }
+  .slide-2{
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightgreen;
+    transition: 2s;
+   /* position: absolute;*/
+   position: relative;
+   h1{
+       position: absolute;
+
+   }
+   img{
+       max-width: 100%;
+       height: auto;
+   }
+  }
+  
+  #percent{
+    width: 0%;
+    height: 10px;
+    margin: 10px 0px;
+    /*background-color: attr(color);*/
+    transition: 800ms ease-in-out;
+  }
+  
 /*UTLILITY*/
 
 .centerize{
     text-align: center;
 }
+.about-us{
+    .dc-flex{
+        // margin: 10rem 0rem;
+        align-items: center;
+    }
+    .scroll-container{
+        .scroll-element{
+            background-color: rgba(#a5d6a7);
+            border-radius: 20px;
+        }
+        iframe{
+            border-radius: 20px;
+        }
+        p{
+            &:first-of-type{
+                margin-top: 3rem;
+            }
+            letter-spacing: 2px;
+            line-height: 1.5rem;
+        }
+        h1{
+            font-size: 3rem;
+            position: relative;
+            .red-line{
+                width: 5rem;
+                height: 5px;
+                margin: 10px;
+                background-color: red;
+                position: absolute;
+                bottom: -10px;
+            }
+        }
+    }
+}
+.dc-flex{
+    display: flex;
+    justify-content: center;
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+//scroll animation

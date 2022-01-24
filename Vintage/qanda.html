@@ -32,6 +32,60 @@
             </ul>
         </nav>
     </header>
+    <section class="asking">
+      <div class="container">
+        
+        <div class="contain">
+
+          <div class="ask-wrapper">
+        
+            <div class="form">
+              <h4>GET IN TOUCH</h4>
+              <div class="cat">
+                <h2 class="form-headline">Ask To Us</h2>
+                <span class="searching">
+                  <form action="javascript:" class="search-bar">
+                    <input type="search" name="search" pattern=".*\S.*" required>
+                    <button class="search-btn" type="submit">
+                      <span>Search</span>
+                    </button>
+                  </form>
+                </span>
+              </div>
+              
+              <form id="submit-form" action="">
+                <p>
+                  <input id="name" class="form-input" type="text" placeholder="Your First Name*">
+                  <small class="name-error"></small>
+                </p>
+                <p>
+                  <input id="email" class="form-input" type="email" placeholder="Your Email*">
+                  <small class="name-error"></small>
+                </p>
+                <p class="full-width">
+                  <input id="company-name" class="form-input" type="text" placeholder="Tags*" required>
+                  <small></small>
+                </p>
+                <p class="full-width">
+                  <textarea  minlength="20" id="message" cols="30" rows="7" placeholder="Your Query*" required></textarea>
+                  <small></small>
+                </p>
+                <p class="full-width">
+                  <input type="checkbox" id="checkbox" name="checkbox" checked> Yes, I would like to receive communications by call / email about Company's services.
+                </p>
+                <p class="full-width">
+                  <input type="submit" class="submit-btn" value="Submit" onclick="checkValidations()">
+                  <button class="reset-btn" onclick="reset()">Reset</button>
+                </p>
+              </form>
+            </div>
+        
+          
+          </div>
+        
+        </div>
+      </div>
+    </section>
     <section class="qna">
        <div class="content" style="display: flex; justify-content: center; margin: 5rem 0rem; padding: 1rem;">
         <h1 class="centerize hover-me">
@@ -50,7 +104,7 @@
               <i class="fas fa-fw fa-futbol"></i>
             </div>
             <div class="accordion__item-title">
-              <h5>Item 1</h5>
+              <h5>How often Vintage Car Rally is held ? </h5>
             </div>
             <div class="accordion__item-toggler">
               <button>
@@ -75,7 +129,7 @@
               <i class="fas fa-fw fa-futbol"></i>
             </div>
             <div class="accordion__item-title">
-              <h5>Item 2</h5>
+              <h5>Where It will be held next year?</h5>
             </div>
             <div class="accordion__item-toggler">
               <button>
@@ -100,7 +154,57 @@
               <i class="fas fa-fw fa-futbol"></i>
             </div>
             <div class="accordion__item-title">
-              <h5>Item 3</h5>
+              <h5>Can we buy cars in cheap price from there ? </h5>
+            </div>
+            <div class="accordion__item-toggler">
+              <button>
+                <h1>&darr;</h1>
+              </button>
+            </div>
+          </div>
+          <div class="accordion__item--detail">
+            <div class="accordion__detail">
+              <div class="accordion__detail-section">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              </div>
+              <div class="accordion__detail-section">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion__item">
+          <div class="accordion__item--summary">
+            <div class="accordion__item-icon">
+              <i class="fas fa-fw fa-futbol"></i>
+            </div>
+            <div class="accordion__item-title">
+              <h5>Why Ferrai company suspended there name last year ?</h5>
+            </div>
+            <div class="accordion__item-toggler">
+              <button>
+                <h1>&darr;</h1>
+              </button>
+            </div>
+          </div>
+          <div class="accordion__item--detail">
+            <div class="accordion__detail">
+              <div class="accordion__detail-section">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              </div>
+              <div class="accordion__detail-section">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion__item">
+          <div class="accordion__item--summary">
+            <div class="accordion__item-icon">
+              <i class="fas fa-fw fa-futbol"></i>
+            </div>
+            <div class="accordion__item-title">
+              <h5>When Vintage car rally will be held in Bangladesh ? </h5>
             </div>
             <div class="accordion__item-toggler">
               <button>

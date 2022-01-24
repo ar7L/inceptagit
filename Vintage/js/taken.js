@@ -2,63 +2,70 @@ const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
 
-hamburger.addEventListener('click', ()=>{
-   //Animate Links
-    navLinks.classList.toggle("open");
-    links.forEach(link => {
-        link.classList.toggle("fade");
-    });
+hamburger.addEventListener('click', () => {
+  //Animate Links
+  navLinks.classList.toggle("open");
+  links.forEach(link => {
+    link.classList.toggle("fade");
+  });
 
-    //Hamburger Animation
-    hamburger.classList.toggle("toggle");
+  //Hamburger Animation
+  hamburger.classList.toggle("toggle");
 });
 
-/*@ Carousel slider*/
-const buttons = document.querySelectorAll("[data-carousel-button]");
-
-
-buttons.forEach(button =>{
-    setInterval(() => {
-        const offset = 1;
-        const slides = button
-      .closest("[data-carousel]")
-      .querySelector("[data-slides]")
-
-        const activeSlide = slides.querySelector("[data-active]")
-        let newIndex = [...slides.children].indexOf(activeSlide) + offset
-        if (newIndex < 0) newIndex = slides.children.length - 1
-        if (newIndex >= slides.children.length) newIndex = 0
-
-        slides.children[newIndex].dataset.active = true
-        delete activeSlide.dataset.active
-    }, 5000);
-})
-
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    const offset = button.dataset.carouselButton === "next" ? 1 : -1
-    const slides = button
-      .closest("[data-carousel]")
-      .querySelector("[data-slides]")
-
-    const activeSlide = slides.querySelector("[data-active]")
-    let newIndex = [...slides.children].indexOf(activeSlide) + offset
-    if (newIndex < 0) newIndex = slides.children.length - 1
-    if (newIndex >= slides.children.length) newIndex = 0
-
-    slides.children[newIndex].dataset.active = true
-    delete activeSlide.dataset.active
-  })
-})
 
 //accordion js
 const accordionItems = document.querySelectorAll(".accordion__item--summary");
 
-accordionItems.forEach(function(item) {
-  item.addEventListener("click", function(event) {
+accordionItems.forEach(function (item) {
+  item.addEventListener("click", function (event) {
     event.stopPropagation();
     let txt = item.textContent;
     console.log(txt);
     item.parentNode.classList.toggle("accordion__item--active");
   });
+});
+
+//scroll animation js
+const scrollElements = document.querySelectorAll(".js-scroll");
+
+const elementInView = (el, dividend = 1) => {
+  const elementTop = el.getBoundingClientRect().top;
+
+  return (
+    elementTop <=
+    (window.innerHeight || document.documentElement.clientHeight) / dividend
+  );
+};
+
+const elementOutofView = (el) => {
+  const elementTop = el.getBoundingClientRect().top;
+
+  return (
+    elementTop > (window.innerHeight || document.documentElement.clientHeight)
+  );
+};
+
+const displayScrollElement = (element) => {
+  element.classList.add("scrolled");
+};
+
+const hideScrollElement = (element) => {
+  element.classList.remove("scrolled");
+};
+
+const handleScrollAnimation = () => {
+  scrollElements.forEach((el) => {
+    console.log(el);
+    if (elementInView(el, 1.25)) {
+      displayScrollElement(el);
+    } else if (elementOutofView(el)) {
+      hideScrollElement(el)
+    }
+  })
+}
+
+window.addEventListener("scroll", () => { 
+  console.log("scrolling");
+  handleScrollAnimation();
 });
